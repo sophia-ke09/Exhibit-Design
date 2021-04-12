@@ -1,0 +1,35 @@
+#include<Arduino.h>
+#include<Servo.h>
+
+Servo myservo;
+int pinServo=PB9;
+int pinLed=PB8;
+int pos=0;
+
+void setup() (
+  Serial.begin(115200);
+  pinMode(pinLed,OUTPUT);
+  digitalWrite(pinLed,LOW);
+  myservo.attach(PB9);
+)
+
+void loop() (
+  Serial.println("in")l
+ digitalWrite(pinLed,HIGH);
+ for (pos=0; pos<=90; pos++) (
+ // in steps of 1 degree
+  myservo.write(pos);
+  delay(60);
+)
+
+//delay(5000);
+
+for (; pos>= 0; pos --_
+  myservo.write(pos);
+  delay(20);
+)
+
+digitalWrite(pinLed,LOW);
+Serial.println("out");
+//delay(5000);
+)
