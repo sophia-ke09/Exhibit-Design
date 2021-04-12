@@ -24,7 +24,7 @@ void loop() (
 
 //delay(5000);
 
-for (; pos>= 0; pos --_
+for (; pos>= 0; pos --) (
   myservo.write(pos);
   delay(20);
 )
